@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wisielec</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Wisielec</h1>
+    <div class="game-container">
+        <div class="hangman-container">
+            <svg id="hangman-svg" viewBox="0 0 300 250" xmlns="http://www.w3.org/2000/svg">
+                <!-- Podstawa -->
+                <line x1="50" y1="230" x2="150" y2="230" stroke="#333" stroke-width="5" class="hangman-part hidden" id="part-1" />
+                <!-- Pionowa belka -->
+                <line x1="100" y1="230" x2="100" y2="50" stroke="#333" stroke-width="5" class="hangman-part hidden" id="part-2" />
+                <!-- Pozioma belka -->
+                <line x1="100" y1="50" x2="200" y2="50" stroke="#333" stroke-width="5" class="hangman-part hidden" id="part-3" />
+                <!-- Lina -->
+                <line x1="200" y1="50" x2="200" y2="80" stroke="#333" stroke-width="3" class="hangman-part hidden" id="part-4" />
+                <!-- Głowa -->
+                <circle cx="200" cy="100" r="20" stroke="#333" stroke-width="3" fill="none" class="hangman-part hidden" id="part-5" />
+                <!-- Tułów -->
+                <line x1="200" y1="120" x2="200" y2="170" stroke="#333" stroke-width="3" class="hangman-part hidden" id="part-6" />
+                <!-- Lewa ręka -->
+                <line x1="200" y1="130" x2="180" y2="150" stroke="#333" stroke-width="3" class="hangman-part hidden" id="part-7" />
+                <!-- Prawa ręka -->
+                <line x1="200" y1="130" x2="220" y2="150" stroke="#333" stroke-width="3" class="hangman-part hidden" id="part-8" />
+                <!-- Lewa noga -->
+                <line x1="200" y1="170" x2="180" y2="200" stroke="#333" stroke-width="3" class="hangman-part hidden" id="part-9" />
+                <!-- Prawa noga -->
+                <line x1="200" y1="170" x2="220" y2="200" stroke="#333" stroke-width="3" class="hangman-part hidden" id="part-10" />
+            </svg>
+        </div>
+
+        <div id="message" class="message hidden"></div>
+
+        <div class="word-container" id="word-container"></div>
+
+        <div class="keyboard" id="keyboard"></div>
+
+        <div class="controls">
+            <button id="new-game-btn" class="btn btn-primary">Nowa gra</button>
+            <button id="cancel-game-btn" class="btn btn-danger">Anuluj grę</button>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>

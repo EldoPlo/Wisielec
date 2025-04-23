@@ -1,0 +1,239 @@
+:root {
+  --primary-color: #3498db;
+  --dark-primary: #2980b9;
+  --secondary-color: #e74c3c;
+  --light-color: #f5f5f5;
+  --dark-color: #333;
+  --gray-color: #95a5a6;
+  --success-color: #2ecc71;
+  --success-dark: #27ae60;
+  --error-color: #c0392b;
+  --error-light: #fadbd8;
+  --success-light: #d5f5e3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: var(--light-color);
+  color: var(--dark-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: var(--dark-primary);
+}
+
+.game-container {
+  max-width: 800px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.hangman-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+#hangman-svg {
+  max-width: 300px;
+  height: 250px;
+  border: 2px solid var(--dark-color);
+  background-color: white;
+  border-radius: 8px;
+  padding: 0.5rem;
+}
+
+.word-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.letter-space {
+  width: 30px;
+  height: 40px;
+  border-bottom: 3px solid var(--dark-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.keyboard {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.key {
+  width: 40px;
+  height: 40px;
+  background-color: white;
+  border: 2px solid var(--dark-color);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.key:hover {
+  background-color: var(--light-color);
+}
+
+.key.active {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--dark-primary);
+}
+
+.key.correct {
+  background-color: var(--success-color);
+  color: white;
+  border-color: var(--success-dark);
+}
+
+.key.incorrect {
+  background-color: var(--secondary-color);
+  color: white;
+  border-color: var(--error-color);
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--dark-primary);
+}
+
+.btn-danger {
+  background-color: var(--secondary-color);
+  color: white;
+}
+
+.btn-danger:hover {
+  background-color: var(--error-color);
+}
+
+.message {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+}
+
+.message.success {
+  background-color: var(--success-light);
+  color: var(--success-dark);
+}
+
+.message.error {
+  background-color: var(--error-light);
+  color: var(--error-color);
+}
+
+.hidden {
+  display: none;
+}
+.key[data-special="hint"] {
+  background-color: #f39c12;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.key[data-special="hint"]:hover {
+  background-color: #e67e22;
+}
+
+@media (max-width: 768px) {
+  .letter-space {
+      width: 25px;
+      height: 35px;
+      font-size: 1.2rem;
+  }
+
+  .key {
+      width: 35px;
+      height: 35px;
+      font-size: 1rem;
+  }
+
+  #hangman-svg {
+      max-width: 250px;
+      height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .letter-space {
+      width: 20px;
+      height: 30px;
+      font-size: 1rem;
+  }
+
+  .key {
+      width: 30px;
+      height: 30px;
+      font-size: 0.9rem;
+  }
+
+  #hangman-svg {
+      max-width: 200px;
+      height: 180px;
+  }
+
+  .btn {
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+  }
+
+  
+}

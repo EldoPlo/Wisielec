@@ -15,8 +15,13 @@ const wordCategories = {
     'po prostu pochodna', 'całka', 'macierz', 'wektor', 'równanie',
     'funkcja', 'logarytm', 'trygonometria', 'algebra', 'geometria'
   ],
-  'Powiedzonka': [
-    'No to fajno', 'Po prostu pochodna pochodna fx', 'Czy można wolniej? Ale po co ?']
+  'Powiedzonka(studia Informatyka Algorytmiczna)': [
+    'No to fajno', 'Po prostu pochodna pochodna fx', 'Czy można wolniej? Ale po co ?'],
+
+  'Teksty do toastu': [
+    'Tyrtum pyrtum', 'Ciach Baba w Piach', 'Chluśniem bo uśniem', 'Po szklanie i na rusztowanie', 'Pierdykniem bo odwykniem', 'Można wypić po kubeczku spokój w głowie w porządeczku', 'No to cyk', 'Jan Sebastian Bach',
+    'Nic tak zdrowia nie upiększa jak bimberku dawka większa', 'Jak mawiają francuzi co stoi to do buzi', 'Osoba godna pije do dna', 'Hop siup zmiana dup', 'Jedzie ksiądz na karuzeli', 'Piłka bramka gol'
+  ]
  
 };
 
